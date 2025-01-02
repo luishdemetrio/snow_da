@@ -7,6 +7,8 @@ In this hands-on lab, you will dive into the world of automation and integration
 
 * **Leveraging ServiceNow Graph Connectors:** You'll explore how to integrate your agent with ServiceNow's KnowledgeBase and Catalog connectors. This will enable your agent to fetch and manage knowledge articles and service catalog items directly from ServiceNow, enhancing its capability to provide precise, context-aware responses or actions.
 
+* **Using a SharePoint Site as Knowledge Base**: Discover how to integrate a SharePoint site as a knowledge base for your agent. This includes steps to add the site, provide a detailed description, and verify the integration, enabling your agent to retrieve and utilize information from SharePoint effectively.
+
 * **Consuming ServiceNow REST APIs with Actions:** Gain hands-on experience in using Actions within Copilot Studio to interact with ServiceNow's REST APIs. This includes learning how to make authenticated API calls to retrieve, update, or create data in ServiceNow, thus extending the functionality of your Declarative Agent.
 
 * **Setting Up Email Communication:** Learn how to configure your agent to send emails. This skill will allow your agent to notify users or administrators based on certain triggers or workflow outcomes within ServiceNow, ensuring smooth communication and workflow management.
@@ -26,6 +28,7 @@ Here's a refined agenda for your hands-on lab, ensuring a logical progression th
 2. **Creating a new Declarative Agent in Copilot Studio**
  * Getting Started with Copilot Studio
  * Consuming ServiceNow Graph Connectors
+ * Consuming SharePoint site
  * Consuming ServiceNow REST APIs
  * Email Integration with Copilot Studio
  
@@ -55,7 +58,9 @@ One of the key benefits of declarative agents is their ability to provide consis
 
 ![](images/snowking.png)
 
-When working with declarative agents, we need to explicitly define what resources we want to use through graph connectors and actions. This approach ensures that the agents are tailored to specific tasks and domains, making them highly specialized and effective. By creating a declarative agent, we don't have access to the full semantic index but just to the parts accessed via the graph connectors that were defined. This is because declarative agents are designed to be specialists, focusing on specific tasks or domains. This allows the agent to access relevant enterprise data and improve its responses. Additionally, we can provide real-time information to the agent via actions or even through Internet web searches. This ensures the agent stays updated and relevant, delivering accurate and timely responses based on the most current data available.
+>When working with declarative agents, we need to explicitly define what resources we want to use through graph connectors and actions. This approach ensures that the agents are tailored to specific tasks and domains, making them highly specialized and effective. 
+
+**By creating a declarative agent, we don't have access to the full semantic index but just to the parts accessed via the graph connectors that were defined**. This is because declarative agents are designed to be specialists, focusing on specific tasks or domains. This allows the agent to access relevant enterprise data and improve its responses. Additionally, we can provide real-time information to the agent via actions or even through Internet web searches. This ensures the agent stays updated and relevant, delivering accurate and timely responses based on the most current data available.
 
 ![](images/copilotstudiokanda.png)
 
@@ -81,7 +86,7 @@ To achieve this specialization, we define a persona and provide detailed instruc
 
 ![](images/newagent.png)
 
-4. In the **Agents** section, select **+Add**
+4. In the **Agents** section, select **+Add** to create a new agent:
 
 ![](images/addagent.png)
 
@@ -107,7 +112,7 @@ To achieve this specialization, we define a persona and provide detailed instruc
  
  ![](images/iconcolor.png)
  
- e. After making these changes, click "Save" to apply the new icon and background color.
+ e. After making these changes, click **Save** to apply the new icon and background color.
 
 8. **Provide a Description**: Below the name field, you'll find a section for the agent's description. This is where you provide a brief overview of what the agent does. The description should be concise yet informative, giving users a clear understanding of the agent's capabilities. For this agent:
 
@@ -207,7 +212,7 @@ After clicking on the Create button, there will be a brief waiting period while 
 
 So far, we have named our agent, defined an icon and background, provided a description, set some instructions, and created the starter prompts. However, if you try to interact with the agent at this stage, it will not be able to answer any questions. This is because we have instructed our agent not to use the internal language model (LLM) and we have not yet provided any knowledge sources for it to use.
 
-To verify this, go to the "Test Your Agent" panel and click on any starter prompt, such as "KB: List Outlook 2010 articles." You will notice the message: "Sorry, I can't answer your question. Please let me know if I can assist you with anything else."
+To verify this, go to the "Test Your Agent" panel and click on any starter prompt, such as "KB: List Outlook 2010 articles." You will notice the message: **Sorry, I can't answer your question. Please let me know if I can assist you with anything else.**
 
 ![](images/noresults.png)
 
@@ -278,20 +283,90 @@ Observe that the response came from the Service Catalog as expected.
 
 ![](images/laptopreference.png)
 
+### Consuming SharePoint site
+
+In this session, we will explore how to effectively consume data from a SharePoint site. This includes understanding the various methods and tools available for accessing and utilizing SharePoint resources.
+
+#### Introduction to SharePoint
+SharePoint is a powerful platform developed by Microsoft for storing, organizing, sharing, and accessing information from any device. It enhances security and efficiency in managing your organization's content. SharePoint is widely used for creating websites, document libraries, and collaborative spaces, making it an essential tool for businesses to streamline workflows and foster collaboration.
+
+#### Benefits
+
+Using SharePoint as a knowledge base for a Copilot Declarative Agent offers several benefits:
+
+1. **Centralized Information**: SharePoint allows you to store all relevant documents, data, and resources in one place, making it easier for the agent to access and retrieve information. By having all relevant documents, data, and resources in one place, the Copilot Declarative Agent can quickly access and retrieve the most accurate and up-to-date information. This reduces the scope of the search, minimizing the chances of retrieving irrelevant or outdated information, and ensures that the responses provided by the agent are precise and reliable. This efficiency not only saves time but also enhances the overall user experience by delivering more accurate answers.
+
+2. **Enhanced Collaboration**: SharePoint's collaborative features enable teams to work together seamlessly, ensuring that the knowledge base is always up-to-date and accurate.
+
+3. **Security and Permissions**: SharePoint provides robust security features, allowing you to control who can access and edit the information, ensuring that sensitive data is protected.
+
+#### Steps to Add SharePoint Knowledge Base
+
+Follow these steps to add the knowledge:
+
+1. Click on **+ Add knowledge** button to start the process of adding a new knowledge base.
+
+![](images/addknowledge2.png)
+
+2. In the list of available knowledge sources, select **SharePoint**.
+
+![](images/addsharepoint.png)
+
+3. Specify the SharePoint site or document library you want to use as the knowledge base. For the purposes of this lab, choose the following SharePoint site: https://m365cpi69113837.sharepoint.com/sites/servicenow and then click on **Add**:
+
+
+![](images/addsharepoint1.png)
+
+> You can select multiple sites or libraries if needed. After selecting the SharePoint site or document library, it's crucial to provide a comprehensive description with the purpose of the site and key content areas.
+
+4. Modify the **Name** and **Description** for the SharePoint Site:
+
+* **Name**: Update the name of the SharePoint site to clearly reflect its purpose. For example, "ServiceNow Collaboration Site"
+
+* **Description**: Provide a concise and informative description that outlines the key features and purpose of the site. For example, "This SharePoint site serves as a comprehensive resource for ServiceNow, including documentation, knowledge base articles, training materials, project plans, and collaboration spaces."
+
+![](images/addsharepoint2.png)
+
+5. Click on **Add** to finalize the addition of the SharePoint knowledge base to your Copilot Declarative Agent.
+
+![](images/addsharepoint3.png)
+
+6. Look for the name of the SharePoint site you added in the list of knowledge sources. Ensure that it appears correctly with the updated name and description.
+
+![](images/addsharepoint4.png)
+
+
+Now that we have added the ServiceNow SharePoint site to the agent's knowledge base, it is time to test if the integration is working correctly. Follow these steps to verify the integration:
+
+7. Verify the Presence of the snow.xls file:
+
+https://m365cpi69113837.sharepoint.com/sites/servicenow/Shared%20Documents
+
+![](images/snowfile.png)
+
+8. Switch back to your agent. In the test panel, use the following prompt to retrieve the incident list from the snow.xls file:
+
+```plaintext
+List the items from the snow spreadsheet and format as a table.
+```
+
+
+9. Review the agent's response to ensure it lists the items from the snow.xls file and formats them as a table.
+
+![](images/snowfileresult.png)
+
+
+By following these steps, you can confirm that the integration between the ServiceNow SharePoint site and the agent's knowledge base is working as expected.
+
+
+
 ### Consuming ServiceNow REST APIs
 
-ServiceNow REST APIs:
-Access and use data from ServiceNow REST APIs to provide accurate and relevant information.
-Configure the agent to interact with the necessary ServiceNow REST APIs.
-SharePoint Site:
+In this section, you will learn how to consume the ServiceNow REST APIs to interact with the ServiceNow platform programmatically. This will enable you to retrieve, update, and create data in ServiceNow, extending the functionality of your Declarative Agent.
 
-Refer to the SharePoint site (to be defined later) for additional information and resources.
-Make sure the agent can access and retrieve information from the specified SharePoint site.
-By adhering to these instructions, the agent ensures that all responses are based on the declared data sources and not on the internal language model.
+ServiceNow provides a robust set of REST APIs that allow you to perform various operations on the platform using standard HTTP methods such as GET, POST, PUT, and DELETE. To consume these APIs, you need to authenticate your requests. ServiceNow supports several authentication methods, including OAuth, Basic Authentication, and API tokens. For security reasons, it is recommended to use OAuth or API tokens instead of hardcoding credentials in your code.
 
-* ServiceNow Graph Connectors: Utilize the information available through ServiceNow Graph Connectors to respond to user queries.
+>Note: In this lab, we are not focusing on creating the ServiceNow REST APIs and setting up the authentication for simplicity. These steps have been previously set up, allowing you to concentrate on consuming the APIs and integrating them with your Declarative Agent.
 
-* ServiceNow REST APIs: Access and use data from ServiceNow REST APIs to provide accurate and relevant information.
 
-* SharePoint Site: Refer to the SharePoint site (to be defined later) for additional information and resources.
-By adhering to these instructions, the agent ensures that all responses are based on the declared data sources and not on the internal language model.
+
