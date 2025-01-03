@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "ServiceNow.Api.Controllers.IncidentController",
+    "Method": "Get",
+    "RelativePath": "api/Incident",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ServiceNow.Api.Controllers.IncidentController\u002BIncident, ServiceNow.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
