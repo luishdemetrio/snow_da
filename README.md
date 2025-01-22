@@ -362,11 +362,158 @@ By following these steps, you can confirm that the integration between the Servi
 
 ### Consuming ServiceNow REST APIs
 
-In this section, you will learn how to consume the ServiceNow REST APIs to interact with the ServiceNow platform programmatically. This will enable you to retrieve, update, and create data in ServiceNow, extending the functionality of your Declarative Agent.
+In this section, you'll learn how to programmatically interact with the ServiceNow platform by consuming its REST APIs. This will enable you to retrieve, update, and create data in ServiceNow, enhancing the functionality of your Declarative Agent.
 
-ServiceNow provides a robust set of REST APIs that allow you to perform various operations on the platform using standard HTTP methods such as GET, POST, PUT, and DELETE. To consume these APIs, you need to authenticate your requests. ServiceNow supports several authentication methods, including OAuth, Basic Authentication, and API tokens. For security reasons, it is recommended to use OAuth or API tokens instead of hardcoding credentials in your code.
+Please note that we are not directly consuming the ServiceNow REST APIs. Instead, we use an intermediary API developed in C# that handles communication with ServiceNow. This C# API requires authentication to ensure secure access.
 
->Note: In this lab, we are not focusing on creating the ServiceNow REST APIs and setting up the authentication for simplicity. These steps have been previously set up, allowing you to concentrate on consuming the APIs and integrating them with your Declarative Agent.
+ServiceNow offers a robust set of REST APIs that allow you to perform various operations on the platform using standard HTTP methods such as GET, POST, PUT, and DELETE. To consume these APIs, you need to authenticate your requests. ServiceNow supports several authentication methods, including OAuth, Basic Authentication, and API tokens. For security reasons, it is recommended to use OAuth or API tokens instead of hardcoding credentials in your code.
+
+>Note: In this lab, we are not focusing on the development of the server-side APIs for simplicity. These steps have been previously set up, allowing you to concentrate on consuming the APIs and integrating them with your Declarative Agent.
+
+#### Steps to Add an Action
+
+Follow these steps to add an action:
+
+1. Start by clicking the **+ Add Action** button to initiate the process of adding a new action.
+
+![](images/addaction.png)
 
 
+2. Click on **+ New action** and then select the option **New REST API**.
+
+![](images/newrestapi.png)
+
+3. In the **Add REST API plugin** UI, you will be prompted to upload the REST API specification file of the API you want to consume. Click on the drag and drop area to browse for the OpenAPI file specification.
+
+![](images/dragopenfilespecification.png)
+
+4. Choose the **servicenow_openapi.yaml** available at C:\Labs\\.
+
+5. Once the file is loaded, click on **Next** to proceed.
+
+![](images/addapinext.png)
+
+6. In the API plugin details, you can provide the action name and a description for your action. You don't need to change anything as this information is extracted from the file. Click on **Next** to proceed. 
+
+![](images/addapinext2.png)
+
+7. The next step is to choose the authentication type. Since the REST API we want to consume is protected, select **OAuth 2.0** from the Choose authentication implemented by your API list and click **Next**.
+
+![](images/addapinext3.png)
+
+8. In this step, we need to configure the plugin to Authenticate Users via OAuth.
+
+>Note: To set up OAuth authentication for your plugin using Microsoft's Azure AD. The necessary credentials have been pre-configured in Azure, and you only need to input them into your plugin configuration.
+
+The following values are derived from an Azure application registration that was set up beforehand. You do not need to manage or adjust the Azure application registration for this lab. Your task is simply to input these credentials into your plugin's configuration.
+
+a. Input the Following OAuth Details:
+
+* Client ID: fe9d68e3-3c2c-480d-8ddf-4e99fdfc4564
+* Client Secret: 	Iwd8Q~lEo8wnec0fPbpvZAUjGmT82Zjq-y2LYcBw
+* Authorization URL: https://login.microsoftonline.com/b5d31b4e-6d83-4373-b61b-de1b0cd6f140/oauth2/v2.0/authorize
+* Token URL: https://login.microsoftonline.com/b5d31b4e-6d83-4373-b61b-de1b0cd6f140/oauth2/v2.0/token
+* Refresh URL: https://login.microsoftonline.com/b5d31b4e-6d83-4373-b61b-de1b0cd6f140/oauth2/v2.0/token
+* Scope: api://9fb937e3-6dcf-4b2f-91d5-31cc8cb48f6b/access_as_user
+
+b. Click on **Next**.
+
+![](images/addapinext4.png)
+
+
+9. Now we need to select the actions, functions of the API, that we want to make available to the agent. Click on the first one, the **Retrieve ServiceNow incidents**:
+
+![](images/addapinext5.png)
+
+10. Click **Next**. Be aware that the action name and description might already be filled in if sourced from the OpenAI specification file, but not all files will have this information. Here, you get to refine or add more detail to each action's description, which is essential for teaching the agent about available resources and what to search for, thus optimizing its interaction with the system.
+
+![](images/addapinext6.png)
+
+11. Click **Next**. Here, you have a chance to review and enrich the details of the parameters and expected results for your function. This step is vital as it helps the agent accurately identify and handle the expected information, ensuring better interaction and performance.
+
+![](images/addapinext7.png)
+  
+12. Click on the second one, the **Create a new incident**, to make it available for our agent:
+
+![](images/addapinext8.png)
+
+13. Click **Next** as the information is already filled.
+
+![](images/addapinext9.png)
+
+14. Take time to review the input and output values and update descriptions as needed. Click on **Next**
+
+![](images/addapinext10.png)
+
+15. Click **Next**. On the "Select Actions" page, you'll see a list of actions you've chosen for your plugin. Ensure all actions are selected before proceeding.
+
+![](images/addapinext11.png)
+
+16. Before moving forward, ensure that exactly two actions are are listed under "Selected actions." Once confirmed, click **Next** to continue.
+
+![](images/addapinext12.png)
+
+This action will initiate the publishing process for your plugin configuration. Please note that publishing might take a moment, so allow some time for the system to complete this operation.
+
+![](images/addapinext13.png)
+
+17. Once your action has been published, click **Create connection** to finish.
+
+![](images/addapinext14.png)
+
+#### Steps to add the action to get the incidents
+
+1. The next step involves adding the actions we have previously created. To do this, **search for ServiceNow** in the action list. Once you find it, **select the action** that allows you to list the ServiceNow incidents. 
+
+![](images/addapinext15.png)
+
+2. Click on the **Sign in** button to configure the connection. You will be prompted to sign in with the account XX@XX. 
+
+![](images/addapinext16.png)
+
+3. Ensure that the connection is active. Once you have verified that the connection is successful, click on the **Next** button to proceed.
+
+![](images/addapinext20.png)
+
+4. Review the action's settings, including the available options, inputs, and outputs. Ensure that everything is configured correctly according to your requirements. Once you have verified all the details, click on the **Add action** button to proceed
+
+![](images/addapinext21.png)
+
+5. You should now see the action to retrieve the list of incidents in the Action list. Verify that this action is present and correctly configured. 
+
+![](images/actionslist.png)
+
+#### Steps to test the action to get the incidents
+
+1. To test the 'Get Incidents' action, click on the icon **restart** to start a new conversation. Now, you can either click on the item **Actions: My incidents** or just type **list my incidents** to retrieve the list of incidents.
+
+![](images/testincidents1.png)
+
+2. Since this is your first time accessing the action, you will need to grant the necessary permissions for the agent to use it. When prompted, click on **Connect** to authorize the connection.
+
+![](images/testincidents2connect.png)
+
+3. On the "Manage Your Connections" page, click on **Connect** to configure the connection settings. You will be prompted to sign in with the account XX@XX. 
+
+![](images/testincidents3.png)
+
+4. Verify that the connection was successful, and then click on **Submit** to finalize the configuration.
+
+![](images/testincidents4.png)
+
+5. Ensure that the connection status shows as **Connected**.
+
+![](images/testincidents5.png)
+
+6.  Switch back to the Copilot Studio page and click on **Retry** to list the incidents.
+
+>Note: If it doesn't work, start a new conversation.
+
+![](images/testincidents2retry.png)
+
+7. The agent is expected to display all incidents that are currently open for the user.
+
+![](images/testincidents6.png)  
+  
+#### Steps to add the action to create a new incident
 
