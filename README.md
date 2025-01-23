@@ -517,3 +517,66 @@ This action will initiate the publishing process for your plugin configuration. 
   
 #### Steps to add the action to create a new incident
 
+In the previous session, you learned how to add the action to list the incidents. Now, it is time to add a session to create a new incident. This exercise will demonstrate how actions, unlike graph connectors, allow us not only to retrieve information from external apps but also to send information to them. By creating a new incident, you will see how to interact with the ServiceNow platform in a more dynamic and functional way.
+
+1. Begin by clicking the **+ Add Action** button to start the process of adding a new action.
+
+![](images/addaction.png)
+
+2. In the search box, type **ServiceNow** and press Enter. From the search results, select the action **Create a new incident**. This action will enable you to create a new incident within the ServiceNow platform.
+
+![](images/newincident1.png)
+
+
+3. Once you have verified that the connection is successful, click on the **Next** button to proceed.
+
+>Note: The connection should already be active since it was set up for the previous action. If it is not, click on the Sign in button to configure the connection. You will be prompted to sign in with your account credentials.
+
+![](images/newincident2.png)
+
+4. Review the action's settings, including the available options, inputs, and outputs. Make sure everything is configured correctly according to your requirements. Once you have verified all the details, click on the **Add action** button to proceed.
+
+![](images/newincident3.png)
+
+5. Wait for the action to be added. This process might take a few seconds, so please be patient.
+
+![](images/newincident4.png)
+
+6. You should now see the action to create a new incident in the Action list. Verify that this action is present and correctly configured.
+
+#### Steps to test the action to create a new incident
+
+1. To test the 'Create a New Incident' action, click on the **restart icon** to start a new conversation. Now, click on the item **Actions: Create an incident** to create a new incident.
+
+![](images/testnewincident1.png)
+
+2. Just like with the previous action, since this is your first time accessing the new action, you will need to grant the necessary permissions for the agent to use it. Click on **Connect** to authorize the connection.
+
+![](images/testnewincident2.png)
+
+3. On the "Manage Your Connections" page, click on **Connect** to configure the connection settings.
+
+![](images/testnewincident3.png)
+
+4. The connection is supposed to be already set, since you already configure it for the previous action. In case it is not connected, please sign in with the account XX@XX. Click on **Submit** to finalize the configuration.
+
+![](images/testnewincident4.png)
+
+5. Ensure that the connection status shows as **Connected**.
+
+![](images/testnewincident5.png)
+
+6.  Switch back to the Copilot Studio page and click on **Retry** to list the incidents.
+
+>Note: If it doesn't work, start a new conversation.
+
+![](images/testnewincident6.png)
+
+7. After completing the previous steps, you should see a confirmation message indicating that your ticket was successfully created in ServiceNow. This message confirms that the action to create a new incident has been executed correctly.
+
+![](images/testnewincident7.png)
+
+8. To verify that your ticket was successfully created, you can ask the agent to list your incidents. This will allow you to double-check and ensure that the new incident appears in the list of your tickets.
+
+![](images/testnewincident8.png)
+
