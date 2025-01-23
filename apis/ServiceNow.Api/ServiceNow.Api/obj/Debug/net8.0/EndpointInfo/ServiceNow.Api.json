@@ -41,6 +41,35 @@
             }
           }
         }
+      },
+      "post": {
+        "tags": [
+          "Incident"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncidentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncidentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncidentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     }
   },
@@ -59,6 +88,34 @@
           },
           "state": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IncidentRequest": {
+        "type": "object",
+        "properties": {
+          "shortDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "category": {
+            "type": "string",
+            "nullable": true
+          },
+          "impact": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "urgency": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           }
         },

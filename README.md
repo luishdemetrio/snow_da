@@ -11,6 +11,8 @@ In this hands-on lab, you will dive into the world of automation and integration
 
 * **Consuming ServiceNow REST APIs with Actions:** Gain hands-on experience in using Actions within Copilot Studio to interact with ServiceNow's REST APIs. This includes learning how to make authenticated API calls to retrieve, update, or create data in ServiceNow, thus extending the functionality of your Declarative Agent.
 
+* **Demonstrating Complex Prompts:** Finding a Spreadsheet, Retrieving an Incident, and Creating a New Incident
+
 * **Setting Up Email Communication:** Learn how to configure your agent to send emails. This skill will allow your agent to notify users or administrators based on certain triggers or workflow outcomes within ServiceNow, ensuring smooth communication and workflow management.
 
 By the end of this lab, you'll have a functional Declarative Agent that can interact with ServiceNow to manage knowledge, service requests, and automate notifications, thereby enhancing productivity and user experience in your organization's ServiceNow environment.
@@ -580,3 +582,28 @@ In the previous session, you learned how to add the action to list the incidents
 
 ![](images/testnewincident8.png)
 
+### Demonstrating Complex Prompts
+
+Now that the agent has both knowledge and actions defined, you can use complex prompts that combine multiple actions and knowledge retrieval. For instance, you might need to find a specific spreadsheet in SharePoint, retrieve details about a system crash incident, and create a new incident in ServiceNow.
+
+Notice that we need to run the following three steps.
+
+* List the items from the snow spreadsheet
+* Get the item About System Crash
+* Create a New Incident in ServiceNow
+
+
+While you could run these prompts individually, integrating them into a single prompt can streamline your workflow and make the process more natural.
+
+
+1. For example, you can use the following prompt: 
+
+Find the SNOW spreadsheet in SharePoint, get the item about system crash, and create a new incident on ServiceNow.
+
+![](images/complex3.png)
+
+2. Use the following prompt to list the incidents on ServiceNow and double-check if the incident was created as expected: "List my incidents on ServiceNow." This will allow you to verify that the new incident appears in the list of your tickets.
+
+![](images/complex4.png)
+
+By following these steps, you can efficiently handle complex tasks that involve multiple actions and knowledge retrieval, demonstrating the powerful capabilities of integrating various functionalities.

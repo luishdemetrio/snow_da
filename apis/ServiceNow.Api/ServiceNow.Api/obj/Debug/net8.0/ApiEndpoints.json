@@ -18,5 +18,21 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ServiceNow.Api.Controllers.IncidentController",
+    "Method": "CreateIncident",
+    "RelativePath": "api/Incident",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ServiceNow.Api.Controllers.IncidentController\u002BIncidentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

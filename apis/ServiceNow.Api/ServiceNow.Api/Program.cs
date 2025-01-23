@@ -1,7 +1,13 @@
 using ServiceNow.Api.Classes;
 using ServiceNow.Api.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Identity.Web;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+
 
 // Add services to the container.
 

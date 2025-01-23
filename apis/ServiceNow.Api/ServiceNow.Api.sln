@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35605.110 d17.13
+VisualStudioVersion = 17.13.35605.110
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceNow.Api", "ServiceNow.Api\ServiceNow.Api.csproj", "{1DA99013-D975-4A26-80F8-1D58FA5C8619}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceNow.Client", "ServiceNow.Client\ServiceNow.Client.csproj", "{E74008D1-0393-445B-BFCF-FA706BD181DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1DA99013-D975-4A26-80F8-1D58FA5C8619}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DA99013-D975-4A26-80F8-1D58FA5C8619}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DA99013-D975-4A26-80F8-1D58FA5C8619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74008D1-0393-445B-BFCF-FA706BD181DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74008D1-0393-445B-BFCF-FA706BD181DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74008D1-0393-445B-BFCF-FA706BD181DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74008D1-0393-445B-BFCF-FA706BD181DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

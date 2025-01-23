@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "SG5bfCwwVYVepjRMgqRQEuDrpRJYAgulatUWBVlDKHk=",
+  "Source": "ServiceNow.Api",
+  "BasePath": "_content/ServiceNow.Api",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

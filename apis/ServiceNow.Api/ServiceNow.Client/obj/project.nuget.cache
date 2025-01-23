@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "Kw+ObnPxOMA=",
+  "success": true,
+  "projectFilePath": "C:\\github\\servicenowda\\apis\\ServiceNow.Api\\ServiceNow.Client\\ServiceNow.Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\luisdem\\.nuget\\packages\\microsoft.identity.client\\4.66.2\\microsoft.identity.client.4.66.2.nupkg.sha512",
+    "C:\\Users\\luisdem\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.35.0\\microsoft.identitymodel.abstractions.6.35.0.nupkg.sha512",
+    "C:\\Users\\luisdem\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\luisdem\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
+    "C:\\Users\\luisdem\\.nuget\\packages\\system.io.pipelines\\9.0.0\\system.io.pipelines.9.0.0.nupkg.sha512",
+    "C:\\Users\\luisdem\\.nuget\\packages\\system.net.http.json\\9.0.0\\system.net.http.json.9.0.0.nupkg.sha512",
+    "C:\\Users\\luisdem\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\luisdem\\.nuget\\packages\\system.text.encodings.web\\9.0.0\\system.text.encodings.web.9.0.0.nupkg.sha512",
+    "C:\\Users\\luisdem\\.nuget\\packages\\system.text.json\\9.0.0\\system.text.json.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
