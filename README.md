@@ -42,7 +42,6 @@ Here's a refined agenda for your hands-on lab, ensuring a logical progression th
  
 ### Overview of Copilot for Microsoft 365
 
-
 With Copilot for Microsoft 365, we have access to both the large language model (LLM) and the semantic index, which allows us to leverage a vast amount of information and context. The semantic index is a sophisticated map of your personal and company data, identifying relationships and making important connections within your data. This includes indexing emails, calendar events, Teams chats, and files stored in OneDrive and SharePoint. This helps Copilot understand the intent behind user prompts and retrieve the most relevant information from your organization's content. 
 
 ![](images/copilotform365.png)
@@ -607,3 +606,85 @@ Find the SNOW spreadsheet in SharePoint, get the item about system crash, and cr
 ![](images/complex4.png)
 
 By following these steps, you can efficiently handle complex tasks that involve multiple actions and knowledge retrieval, demonstrating the powerful capabilities of integrating various functionalities.
+
+
+### Setting Up Email Communication
+
+In this session, you will learn how to set up email communication using the **Office 365 Outlook** connector available in the actions. Connectors allow you to integrate various external applications and services, enabling seamless communication and data exchange.
+
+#### Introduction to Connectors:
+
+Connectors are powerful tools that enable you to connect different applications and services, allowing them to work together seamlessly. By using connectors, you can automate tasks, streamline workflows, and enhance productivity. In this session, we will focus on using the Outlook connector to set up email communication.
+
+#### Steps to Set Up Email Communication:
+
+
+1. Start by clicking on the + Add Action button available in the actions section of the agent.
+
+![](images/addaction.png)
+
+2. Search for Office and click the action **Send an email (V2)**.
+
+![](images/addaction2.png)
+
+3. If a connection is already set, click on **Next** to proceed. Otherwise, click on the **'...'** button to configure the connection. You will be prompted to sign in with your Outlook account credentials. Ensure that the connection is active and successfully configured.
+
+![](images/addaction3.png)
+
+4. Click on the **Add action** button.
+
+![](images/addaction4.png)
+
+5. Please wait a few seconds for the action to complete.
+
+![](images/addaction5.png)
+
+6. Make sure that Office 365 Outlook appears in the actions list.
+
+![](images/addaction6.png)
+
+#### Testing the connector
+
+After setting up the email details, you can test the action to ensure it works correctly.
+
+1. In the "Test your agent" panel, click the **Restart** button to begin a new conversation.
+
+![](images/testoutlook1.png)
+
+2. Click on **List my incidents**.
+
+![](images/testoutlook2.png)
+
+3. Ask the agent to draft an email to Amber with the incidents listed in a table format. Since this is the first time using the connector, you will be prompted to connect. Click on "Connect" to allow the connector to be used.
+
+![](images/testoutlook3.png)
+
+4. On the "Manage Your Connections" page, find the Office 365 Outlook connection and click on **Connect** to configure the connection settings.
+
+![](images/testoutlook4.png)
+
+4. The connection is supposed to be already set, since you already configure it for the previous actions. In case it is not connected, please sign in with the account XX@XX. Click on **Submit** to finalize the configuration.
+
+![](images/testoutlook5.png)
+
+5. Ensure that the connection status shows as **Connected**.
+
+![](images/testoutlook6.png)
+
+6.  Switch back to the Copilot Studio page and click on **Retry** to list the incidents.
+
+>Note: If it doesn't work, start a new conversation.
+
+![](images/testoutlook7.png)
+
+7. The agent is expected to draft an email to Amber with the incidents listed in a table format. Feel free to ask the agent to make any changes to the message with your preferences.
+
+![](images/testoutlook8.png)
+
+8. If everything looks good, ask the agent to send the email.
+
+By following these steps, you can set up email communication using the Outlook connector, enabling seamless integration with your Outlook account and automating your email workflows.
+
+
+### Publish the agent
+
