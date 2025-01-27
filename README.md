@@ -63,7 +63,7 @@ One of the key benefits of declarative agents is their ability to provide consis
 
 **By creating a declarative agent, we don't have access to the full semantic index but just to the parts accessed via the graph connectors that were defined**. This is because declarative agents are designed to be specialists, focusing on specific tasks or domains. This allows the agent to access relevant enterprise data and improve its responses. Additionally, we can provide real-time information to the agent via actions or even through Internet web searches. This ensures the agent stays updated and relevant, delivering accurate and timely responses based on the most current data available.
 
-![](images/copilotstudiokanda.png)
+![](images/agentoverview.png)
 
 To achieve this specialization, we define a persona and provide detailed instructions for the agent, ensuring it can perform its designated functions effectively and consistently. By doing so, we create agents that are highly focused and capable of delivering precise and relevant responses based on their defined scope that meets specific business needs.
 
@@ -643,6 +643,30 @@ Connectors are powerful tools that enable you to connect different applications 
 
 ![](images/addaction6.png)
 
+#### Updating Agent Instructions for Email:
+
+To ensure our agent sends emails in the correct format, we need to update the instructions. Specifically, we need to include a step that instructs the agent to send all emails in rich text format. Additionally, if the email address domain is not specified and only the user alias is provided, the agent should assume the domain is @M365CPI69113837.onmicrosoft.com.
+
+1. In the Agent's Details section, click on the **Edit** button to modify the instructions.
+
+![](images/updateinstructions1.png)
+
+Add the following instructions at the end of the agent instructions:
+
+```plaintext
+7. **Emails instructions:**
+ a. Always ask the user to confirm before sending the email. Do not send it without user confirmation.
+ b. Use rich text format in the email body.
+ c. If the user provides only the recipient's alias, append the domain @M365CPI69113837.onmicrosoft.com to the alias. 
+d. When drafting an email, if the recipient's email address is not fully specified (i.e., only the alias is provided), automatically append the domain @M365CPI69113837.onmicrosoft.com to the alias.
+ e. Before asking for the email recipient, double-check if the email address is already provided in the chat history in the previous messages. 
+f. If all the above rules are satisfied, use the Office 365 Outlook connector to send the email.
+```
+
+2. Click on the **Save** button to update the agent with the email instructions.
+
+![](images/updateinstructions2.png)
+
 #### Testing the connector
 
 After setting up the email details, you can test the action to ensure it works correctly.
@@ -655,7 +679,7 @@ After setting up the email details, you can test the action to ensure it works c
 
 ![](images/testoutlook2.png)
 
-3. Ask the agent to draft an email to Amber with the incidents listed in a table format. Since this is the first time using the connector, you will be prompted to connect. Click on "Connect" to allow the connector to be used.
+3. Ask the agent to **Help me draft an email to amberr asking her to review the incidents list.**. Since this is the first time using the connector, you will be prompted to connect. Click on **Connect** to allow the connector to be used.
 
 ![](images/testoutlook3.png)
 
@@ -681,7 +705,20 @@ After setting up the email details, you can test the action to ensure it works c
 
 ![](images/testoutlook8.png)
 
+8. Instruct the agent to list the incidents in a table format:
+
+```plaintext
+please use the table format to show the incidents
+```
+
+![](images/testoutlook9.png)
+
 8. If everything looks good, ask the agent to send the email.
+
+```plaintex
+It looks good. Please send the email to her using rich text format.
+```
+![](images/testoutlook9.png)
 
 By following these steps, you can set up email communication using the Outlook connector, enabling seamless integration with your Outlook account and automating your email workflows.
 
