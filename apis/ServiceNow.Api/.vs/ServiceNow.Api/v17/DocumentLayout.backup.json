@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\github\\servicenowda\\apis\\ServiceNow.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E74008D1-0393-445B-BFCF-FA706BD181DB}|ServiceNow.Client\\ServiceNow.Client.csproj|c:\\github\\servicenowda\\apis\\servicenow.api\\servicenow.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E74008D1-0393-445B-BFCF-FA706BD181DB}|ServiceNow.Client\\ServiceNow.Client.csproj|solutionrelative:servicenow.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1DA99013-D975-4A26-80F8-1D58FA5C8619}|ServiceNow.Api\\ServiceNow.Api.csproj|c:\\github\\servicenowda\\apis\\servicenow.api\\servicenow.api\\controllers\\incidentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DA99013-D975-4A26-80F8-1D58FA5C8619}|ServiceNow.Api\\ServiceNow.Api.csproj|solutionrelative:servicenow.api\\controllers\\incidentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1DA99013-D975-4A26-80F8-1D58FA5C8619}|ServiceNow.Api\\ServiceNow.Api.csproj|c:\\github\\servicenowda\\apis\\servicenow.api\\servicenow.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{1DA99013-D975-4A26-80F8-1D58FA5C8619}|ServiceNow.Api\\ServiceNow.Api.csproj|solutionrelative:servicenow.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E74008D1-0393-445B-BFCF-FA706BD181DB}|ServiceNow.Client\\ServiceNow.Client.csproj|c:\\github\\servicenowda\\apis\\servicenow.api\\servicenow.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E74008D1-0393-445B-BFCF-FA706BD181DB}|ServiceNow.Client\\ServiceNow.Client.csproj|solutionrelative:servicenow.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E74008D1-0393-445B-BFCF-FA706BD181DB}|ServiceNow.Client\\ServiceNow.Client.csproj|c:\\github\\servicenowda\\apis\\servicenow.api\\servicenow.client\\servicenow.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 191,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -65,10 +65,6 @@
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "ServiceNow.Client.csproj",
@@ -78,8 +74,7 @@
               "RelativeToolTip": "ServiceNow.Client\\ServiceNow.Client.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-03T17:12:36.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T17:12:36.516Z"
             },
             {
               "$type": "Document",
@@ -91,18 +86,17 @@
               "RelativeToolTip": "ServiceNow.Api\\ServiceNow.Api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-03T17:08:02.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T17:08:02.871Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\github\\servicenowda\\apis\\ServiceNow.Api\\ServiceNow.Client\\Program.cs",
               "RelativeDocumentMoniker": "ServiceNow.Client\\Program.cs",
               "ToolTip": "C:\\github\\servicenowda\\apis\\ServiceNow.Api\\ServiceNow.Client\\Program.cs",
               "RelativeToolTip": "ServiceNow.Client\\Program.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAYwGQAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-03T16:51:44.594Z",
               "EditorCaption": ""
@@ -129,12 +123,11 @@
               "RelativeToolTip": "ServiceNow.Api\\Classes\\ServiceNowSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T14:20:19.452Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T14:20:19.452Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\github\\servicenowda\\apis\\ServiceNow.Api\\ServiceNow.Api\\appsettings.Development.json",
               "RelativeDocumentMoniker": "ServiceNow.Api\\appsettings.Development.json",
@@ -142,8 +135,7 @@
               "RelativeToolTip": "ServiceNow.Api\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-03T14:18:45.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T14:18:45.647Z"
             },
             {
               "$type": "Document",
@@ -159,29 +151,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ServiceNowToken.cs",
               "DocumentMoniker": "C:\\github\\servicenowda\\apis\\ServiceNow.Api\\ServiceNow.Api\\Classes\\ServiceNowToken.cs",
               "RelativeDocumentMoniker": "ServiceNow.Api\\Classes\\ServiceNowToken.cs",
               "ToolTip": "C:\\github\\servicenowda\\apis\\ServiceNow.Api\\ServiceNow.Api\\Classes\\ServiceNowToken.cs",
               "RelativeToolTip": "ServiceNow.Api\\Classes\\ServiceNowToken.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T14:13:18.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T14:13:18.309Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "IncidentController.cs",
               "DocumentMoniker": "C:\\github\\servicenowda\\apis\\ServiceNow.Api\\ServiceNow.Api\\Controllers\\IncidentController.cs",
               "RelativeDocumentMoniker": "ServiceNow.Api\\Controllers\\IncidentController.cs",
               "ToolTip": "C:\\github\\servicenowda\\apis\\ServiceNow.Api\\ServiceNow.Api\\Controllers\\IncidentController.cs",
               "RelativeToolTip": "ServiceNow.Api\\Controllers\\IncidentController.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAAAIgAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-03T14:08:01.384Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

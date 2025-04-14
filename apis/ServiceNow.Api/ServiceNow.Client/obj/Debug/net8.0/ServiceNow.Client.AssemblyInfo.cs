@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServiceNow.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b5eb943d28d24d23a6fd01d624e075a8b75a57f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db17c06fee4b79ef940b904b40dcfb14f3ef7f86")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServiceNow.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServiceNow.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

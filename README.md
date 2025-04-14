@@ -1,4 +1,4 @@
-# Learn how to build a Declarative Agent via Copilot Studio to consume ServiceNow Graph Connectors and REST APIs
+# Build a Declarative Agent via Copilot Studio to consume ServiceNow Graph Connectors and REST APIs
 
 
 In this hands-on lab, you will dive into the world of automation and integration by using Copilot Studio to create a Declarative Agent tailored for ServiceNow interactions. Here's what you'll learn:
@@ -26,15 +26,19 @@ Here's a refined agenda for your hands-on lab, ensuring a logical progression th
  * Overview of Copilot for Microsoft 365
  * Overview of Declarative Agents
  * Overview of Copilot Studio
+
+2. Set Up OAuth on ServiceNow
  
-2. **Creating a new Declarative Agent in Copilot Studio**
+3. Set Up ServiceNow Knowledge Base Graph Connector
+
+4. **Creating a new Declarative Agent in Copilot Studio**
  * Getting Started with Copilot Studio
  * Consuming ServiceNow Graph Connectors
  * Consuming SharePoint site
  * Consuming ServiceNow REST APIs
  * Email Integration with Copilot Studio
  
-3. Wrap-up
+5. Wrap-up
 * Review of key concepts covered
 * Next steps and further learning resources
 
@@ -74,8 +78,155 @@ To achieve this specialization, we define a persona and provide detailed instruc
 
 ![](images/copilotstudio.png)
 
+## 2. Set Up OAuth on ServiceNow
 
-## 2. Creating a new Declarative Agent in Copilot Studio
+In this lab, I am using the ServiceNow development environment called the [Now Platform](https://developer.servicenow.com/dev.do), which enables developers to quickly build, test, and deploy applications to improve workflows and productivity within their organizations. With a free account on the Now Platform, you can start building powerful applications that leverage ServiceNow's advanced capabilities for workflow management, incident management, and service requests. Whether you're an experienced developer or just getting started, the Now Platform offers a flexible and easy-to-use environment for creating custom solutions tailored to your organization's unique needs.
+
+A ServiceNow admin needs to provision an endpoint in your ServiceNow instance.
+
+To set up OAuth authentication in ServiceNow, follow these steps:
+
+2.1. Create an OAuth Application Registry:
+
+   * Navigate to System OAuth > Application Registry in your ServiceNow instance.
+
+     ![](images/snow01.png)   
+     
+     
+   * Click on New
+   
+     ![](images/snow02.png)
+   
+   * Click on Create an OAuth API endpoint for external clients.
+   
+     ![](images/snow03.png)
+     
+   * Fill in the required fields:
+   
+     * Name: Enter a name for your OAuth application. For instance: GraphConnectorForSnowKB
+     
+     * Client ID: This will be auto-generated.
+     
+     * Client Secret: Leave it empty as this will be auto-generated.   
+
+     * Redirect URL: Enter the URL where the authorization code will be sent. You will need to click on the unlock button first to enable that field. For this lab, it is the M365 Enterprise URL: https://gcs.office.com/v1.0/admin/oauth/callback
+     
+     * Click on Submit.
+     
+      ![](images/snow04.png)
+
+2.2 Generate Client ID and Client Secret:
+
+
+   After creating the OAuth application registry, you will  a Client ID and Client Secret. These credentials will be used by your client application to request an access token.
+    
+  1. Locate the OAuth Application:
+
+   * Navigate to System OAuth > Application Registry in your ServiceNow instance.
+
+   * In the list of applications, search for the application that you previously created (e.g., GraphConnectorForSnowKB).
+   
+  2. Access Application Details:
+
+   * Click on the name of the application to open its details.
+   
+     ![](images/snow05.png)
+     
+  3. Retrieve Client ID and Client Secret:
+
+   * In the application details page, you will find the Client ID and Client Secret fields.
+   
+   * The Client ID is auto-generated and displayed.
+   
+   * The Client Secret is also auto-generated. If it is not visible, you may need to click on the toggle password visibility button to reveal it.
+   
+     ![](images/snow06.png)
+   
+  4. Note Down the Credentials:
+
+     Make sure to securely note down the Client ID and Client Secret as they will be required for your client application to request an access token.
+     
+By following these steps, you will be able to generate and retrieve the Client ID and Client Secret for your OAuth application in ServiceNow.
+
+## 3. Set Up ServiceNow Knowledge Base Graph Connector
+
+3.1. Access Microsoft Admin Center:
+
+* Ensure you have Global admin or Search admin permissions.
+* Navigate to the [Microsoft Admin Center](https://admin.microsoft.com/).
+* In the left-hand navigation pane, click on **Settings**.
+* Under Settings, select **Search & Intelligence**.
+* On the right-hand side of the page, click on the **Data sources** tab.
+
+  ![](images/mac01.png)
+
+
+3.2 Add the Graph Connector:
+
+* In the Graph connectors section, click on **+ Add connection**
+
+  ![](images/mac02.png)
+
+* Search for and choose **ServiceNow**, select the **ServiceNow Knowledge** and then click **Next**.
+
+  ![](images/mac03.png)
+
+
+3.3 Fill in the Connector Details:
+
+* **Display Name:** Enter a name for your connector that will help you identify it later. For instance: ServiceNowKB
+
+* **ServiceNow URL:** To connect to your ServiceNow data, you need your organization's ServiceNow instance URL. Your organization's ServiceNow instance URL typically looks like https://your-organization-name.service-now.com.
+
+* **Authentication Type:** Select ServiceNow OAuth from the dropdown menu.
+
+* **Client ID:** Enter the Client ID you obtained from ServiceNow App Registration earlier.
+* **Client Secret:** Enter the Client Secret you obtained from ServiceNow App Registration earlier.
+
+* Click on **Authorize** to authenticate and connect your SalesForce account.
+
+  ![](images/mac04.png)
+  
+* You will be prompted to provide the ServiceNow admin credentials.
+  
+  ![](images/mac05.png)
+  
+* Allow the connection:
+
+  ![](images/mac06.png)
+
+* Click on Custom setup to have access to edit the default values for settings.
+
+  ![](images/mac07.png)
+  
+* Access Permissions:  
+  
+ * In the Users tab, you can select who can see the data source content in the search page.
+ * Keep the default one.
+ 
+  ![](images/mac08.png)
+  
+* Content:
+
+  This section contains the schema for the connection. The schema determines how your content ingested via a Graph connector is used in various Copilot and Search experiences.
+  
+  ![](images/mac09.png)
+  
+ * Sync 
+ You can configure full and incremental crawls based on the scheduling options present here. By default, incremental crawl is set for every 15 minutes, and full crawl is set for every day.
+ 
+   * Click on Run once in a day
+   
+   * Click on Create
+   
+  ![](images/mac10.png) 
+  
+  
+* Agree to the Microsoft notice by checking the box. This authorizes Microsoft to create an index of third-party data in your Microsoft 365 tenant.
+
+
+
+## 4. Creating a new Declarative Agent in Copilot Studio
 
 ### Getting Started with Copilot Studio
 
@@ -654,13 +805,12 @@ To ensure our agent sends emails in the correct format, we need to update the in
 Add the following instructions at the end of the agent instructions:
 
 ```plaintext
-7. **Emails instructions:**
- a. Always ask the user to confirm before sending the email. Do not send it without user confirmation.
- b. Use rich text format in the email body.
- c. If the user provides only the recipient's alias, append the domain @M365CPI69113837.onmicrosoft.com to the alias. 
-d. When drafting an email, if the recipient's email address is not fully specified (i.e., only the alias is provided), automatically append the domain @M365CPI69113837.onmicrosoft.com to the alias.
- e. Before asking for the email recipient, double-check if the email address is already provided in the chat history in the previous messages. 
-f. If all the above rules are satisfied, use the Office 365 Outlook connector to send the email.
+7. **Emails**:
+   - Use the Office 365 Outlook connector to send emails.
+   - Only send the email if the user explicitly requests it. Do not send emails that are meant to be drafts.
+   - If the user provides only the recipient's alias, include the domain @M365CPI69113837.onmicrosoft.com.
+   - When drafting an email, if the recipient's email address is not fully specified (i.e., only the alias is provided), automatically append the domain @M365CPI69113837.onmicrosoft.com to the alias.
+   - If the user asks for help drafting an email, ensure the email addresses are correctly formatted with the domain included if necessary.
 ```
 
 2. Click on the **Save** button to update the agent with the email instructions.
