@@ -23,3 +23,14 @@ C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\bin\Debug\net8.0\ru
 C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\obj\Debug\net8.0\ServiceNow.Client.csproj.AssemblyReference.cache
 C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\obj\Debug\net8.0\ServiceN.42E7900D.Up2Date
 C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\bin\Debug\net8.0\appsettings.Development.json
+C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\bin\Debug\net8.0\appsettings.json
+C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\github\servicenowda\apis\ServiceNow.Api\ServiceNow.Client\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll

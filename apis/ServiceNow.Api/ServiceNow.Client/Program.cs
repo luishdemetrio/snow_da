@@ -1,21 +1,34 @@
-﻿
-
-using System.Net.Http.Headers;
-using System.Text;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Identity.Client;
 using Newtonsoft.Json;
+using ServiceNow.Client;
+using System.Net.Http.Headers;
+using System.Text;
 
-string tenantId = "b5d31b4e-6d83-4373-b61b-de1b0cd6f140";
 
-string apiUrl = "https://servicenowdaapi-cce9f8efcybxd0ee.canadacentral-01.azurewebsites.net/api/Incident";//"https://localhost:7033/api/Incident";
+// load appsettings.json
+IConfiguration configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile("appsettings.Development.json", optional: true, reloadOnChange: true)
+    .Build();
 
+// Map AppSettings
+var appSettings = configuration.GetSection("AppSettings").Get<AppSettings>();
 
-string[] scopes = { "api://9fb937e3-6dcf-4b2f-91d5-31cc8cb48f6b/access_as_user" };
+// Set settings
+string tenantId = appSettings.TenantId;
+string apiUrl = appSettings.ApiUrl;
+string[] scopes = { appSettings.Scopes }; 
+string clientId = appSettings.ClientId;
+
+// Configurar o MSAL
 var app = PublicClientApplicationBuilder
-    .Create("37de725d-6f16-4b0e-8e71-b1cc1a1f882d")
+    .Create(clientId)
     .WithAuthority($"https://login.microsoftonline.com/{tenantId}")
     .WithRedirectUri("http://localhost")
-        .Build();
+    .Build();
+
 
 var result = await app.AcquireTokenInteractive(scopes).ExecuteAsync();
 
