@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServiceNow.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f44720f3d90a20f839d85f6b13fa820f6eec67bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37e7190d94e41af4d08f490d2ad77cf07d5e3f41")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServiceNow.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServiceNow.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

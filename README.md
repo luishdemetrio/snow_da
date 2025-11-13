@@ -1,9 +1,9 @@
-# Build a Declarative Agent via Copilot Studio to consume ServiceNow Graph Connectors and REST APIs
+# Build a Custom Agent via Copilot Studio to consume ServiceNow Graph Connectors and REST APIs
 
 
-In this hands-on lab, you will dive into the world of automation and integration by using Copilot Studio to create a Declarative Agent tailored for ServiceNow interactions. Here's what you'll learn:
+In this hands-on lab, you will dive into the world of automation and integration by using Copilot Studio to create a Custom Agent tailored for ServiceNow interactions. Here's what you'll learn:
 
-* **Building a Declarative Agent in Copilot Studio:** Understand the fundamentals of setting up and configuring a Declarative Agent specifically designed to interact seamlessly with ServiceNow.
+* **Building a Custom Agent in Copilot Studio:** Understand the fundamentals of setting up and configuring a Custom Agent specifically designed to interact seamlessly with ServiceNow.
 
 * **Leveraging ServiceNow Graph Connectors:** You'll explore how to integrate your agent with ServiceNow's KnowledgeBase and Catalog connectors. This will enable your agent to fetch and manage knowledge articles and service catalog items directly from ServiceNow, enhancing its capability to provide precise, context-aware responses or actions.
 
@@ -90,7 +90,7 @@ To set up OAuth authentication in ServiceNow, follow these steps:
 
    * Navigate to System OAuth > Application Registry in your ServiceNow instance.
 
-     ![](images/snow01.png)   
+     ![](images/snow01.png)
      
      
    * Click on New
@@ -195,7 +195,15 @@ By following these steps, you will be able to generate and retrieve the Client I
 
   ![](images/mac06.png)
 
-* Click on Custom setup to have access to edit the default values for settings.
+* Agree to the Microsoft notice by checking the box. This authorizes Microsoft to create an index of third-party data in your Microsoft 365 tenant.
+
+  ![](images/mac06a.png)
+  
+3.4 Custom Settings:
+
+Allows you to edit the default values for settings.
+
+* Click on Custom setup:
 
   ![](images/mac07.png)
   
@@ -222,7 +230,7 @@ By following these steps, you will be able to generate and retrieve the Client I
   ![](images/mac10.png) 
   
   
-* Agree to the Microsoft notice by checking the box. This authorizes Microsoft to create an index of third-party data in your Microsoft 365 tenant.
+
 
 
 

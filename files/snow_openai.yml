@@ -4,7 +4,7 @@ info:
   description: "REST APIs to retrieve and create ServiceNow incidents"
   version: "latest"
 servers:
-- url: "https://dev270587.service-now.com/"
+- url: "https://servicenowdaapi-cce9f8efcybxd0ee.canadacentral-01.azurewebsites.net"
 paths:
   /api/892928/declarative_agents/GetMyIncidents:
     get:
